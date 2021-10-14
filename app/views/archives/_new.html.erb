@@ -1,0 +1,7 @@
+<%= form_for(@archive_instance) do |f| %>
+  <div class="field">
+    <%= f.text_field :title, placeholder: "To be continue" %>
+    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>

@@ -16,6 +16,9 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
 
+      <%= f.label :role, "Role" %>
+      <%= f.select :role, [['normal', 0], ['admin', 1]] %>
+
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>

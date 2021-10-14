@@ -1,0 +1,14 @@
+<div class="col-md-8">
+  <% if @archives %>
+    <ul class="microposts">
+      <% @archives.each do |archive| %>
+        <li>
+          <%= archive.title %>
+          <%= archive.content %>
+          <%= archive.created_by_admin %>
+        </li>
+      <% end %>
+    </ul>
+    <%= will_paginate @archives %>
+  <% end %>
+</div>

@@ -7,8 +7,12 @@
     sample application.
   </h2>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <% if @current_user %>
+    <%= render 'archives/new' %>
+    <%= render 'archives/index' %>
+  <% else %>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
 
-<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
-            "https://rubyonrails.org/" %>
+<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"), "https://rubyonrails.org/" %>
