@@ -21,6 +21,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    log_out
+    User.find(params[:id]).destroy
+    flash[:success] = "I have withdrawn"
+    redirect_to root_url
+  end
+
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :role)
   end

@@ -1,11 +1,4 @@
 <div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
-
-  <h2>
-    This is the home page for the
-    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
 
   <% if @current_user %>
     <%= render 'archives/new' %>
@@ -14,5 +7,3 @@
     <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
   <% end %>
 </div>
-
-<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"), "https://rubyonrails.org/" %>
